@@ -157,6 +157,21 @@ ul {
   margin: 0px;
 }
 
+@media screen and (max-width: 767px) {
+  .container-prod {
+    background-image: url(../images/how-its-made/milk_backg320@1.png);
+    background-repeat: no-repeat;
+    background-position: center 482px;
+    background-size: contain;
+  }
+}
+
+@media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 2dppx), screen and (max-width: 767px) and (min-resolution: 192dpi) {
+  .product-prod {
+    background-image: url(../images/how-its-made/milk_backg320@2.png);
+  }
+}
+
 @media screen and (min-width: 768px) {
   .container-prod {
     display: -webkit-box;
@@ -168,7 +183,15 @@ ul {
 @media screen and (min-width: 1200px) {
   .container-prod {
     background-image: url(../images/how-its-made/milk_backg1.png);
+    background-position: center 112px;
     background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 2dppx), screen and (min-width: 1200px) and (min-resolution: 192dpi) {
+  .container-prod {
+    background-image: url(../images/how-its-made/milk_backg2.png);
   }
 }
 
@@ -229,6 +252,10 @@ ul {
     font-size: 16px;
     line-height: 28px;
   }
+}
+
+.prod-text {
+  margin-top: 40px;
 }
 
 .product-text {
@@ -300,7 +327,7 @@ ul {
 }
 
 .btn-text::after {
-  content: " ";
+  content: ' ';
   position: absolute;
   left: 120px;
   top: 15px;
@@ -358,6 +385,14 @@ ul {
     font-size: 14px;
     line-height: 28px;
     letter-spacing: 0.02em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container-indent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 

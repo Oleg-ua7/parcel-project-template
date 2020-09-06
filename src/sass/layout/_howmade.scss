@@ -5,10 +5,7 @@ ul {
   margin-left: 0;
   padding-left: 0;
 }
-* {
-  margin: 0px;
-  padding: 0px;
-}
+
 .container-made {
   width: 1280px;
   left: 0px;
@@ -71,6 +68,22 @@ ul {
   padding-bottom: 15px;
   margin: 0px;
 }
+@media screen and (max-width: 767px) {
+  .container-prod {
+    // display: flex;
+    background-image: url(../images/howmade/milk-backg320@1.png);
+    background-repeat: no-repeat;
+    background-position: center 482px;
+    background-size: contain;
+  }
+}
+@media screen and (max-width: 767px) and (min-device-pixel-ratio: 2),
+  screen and (max-width: 767px) and (min-resolution: 2dppx),
+  screen and (max-width: 767px) and (min-resolution: 192dpi) {
+  .product-prod {
+    background-image: url(../images/howmade/milk-backg320@2.png);
+  }
+}
 @media screen and (min-width: 768px) {
   .container-prod {
     display: flex;
@@ -78,10 +91,20 @@ ul {
 }
 @media screen and (min-width: 1200px) {
   .container-prod {
-    background-image: url(../images/milk_backg1.png);
+    background-image: url(../images/howmade/milk-backg1.png);
+    background-position: center 112px;
     background-repeat: no-repeat;
+    background-size: contain;
   }
 }
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2),
+  screen and (min-width: 1200px) and (min-resolution: 2dppx),
+  screen and (min-width: 1200px) and (min-resolution: 192dpi) {
+  .container-prod {
+    background-image: url(../images/howmade/milk-backg2.png);
+  }
+}
+
 .cow_milk {
   @media screen and (min-width: 320px) {
     width: 280px;
@@ -125,7 +148,9 @@ ul {
     line-height: 28px;
   }
 }
-
+.prod-text {
+  margin-top: 40px;
+}
 .product-text {
   font-family: DM Sans;
   font-style: normal;
@@ -150,6 +175,7 @@ ul {
     letter-spacing: 0.04em;
   }
 }
+
 .button {
   position: relative;
   width: 176px;
@@ -181,15 +207,16 @@ ul {
   &::after {
     content: ' ';
     position: absolute;
-    left: 120px;
-    top: 15px;
+    left: 122px;
+    top: 18px;
 
     display: block;
-    background-image: url('../images/icon-sign.svg');
+    background-image: url('../images/howmade/icon-sign.svg');
     width: 8px;
     height: 10px;
   }
 }
+
 .list {
   font-family: Titan One;
   font-style: normal;
@@ -219,7 +246,8 @@ ul {
   line-height: 24px;
 
   color: #000000;
-  @media screen and (min-width: 1200px) {
+
+  @media screen and (min-width: 768px) {
     font-size: 16px;
     line-height: 24px;
   }
@@ -229,12 +257,17 @@ ul {
     letter-spacing: 0.02em;
   }
 }
-
+.container-indent {
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
 .indent {
   padding-left: 20px;
   @media screen and (min-width: 320px) {
     width: 230px;
   }
+
   @media screen and (min-width: 768px) {
     width: 180px;
     margin-right: 60px;
@@ -248,5 +281,10 @@ ul {
 @media screen and (min-width: 768px) {
   .indent:last-child {
     margin-right: 0px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .picture-icon {
+    margin-top: 20px;
   }
 }

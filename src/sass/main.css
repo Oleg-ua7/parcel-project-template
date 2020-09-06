@@ -3,24 +3,6 @@
  * Главный файл стилей.
  * Все паршалы подключаются сюда.
  */
-.example {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  line-height: 1.5;
-  color: #212121;
-  max-width: 960px;
-  padding: 15px;
-}
-
-.example code {
-  font-family: monospace;
-  font-size: 16px;
-  font-weight: 700;
-  background-color: teal;
-  color: white;
-  padding: 2px 6px;
-  border-radius: 2px;
-}
-
 body {
   background-color: #ffffff;
   color: #757575;
@@ -159,7 +141,7 @@ ul {
 
 @media screen and (max-width: 767px) {
   .container-prod {
-    background-image: url(../images/how-its-made/milk_backg320@1.png);
+    background-image: url(../images/howmade/milk-backg320@1.png);
     background-repeat: no-repeat;
     background-position: center 482px;
     background-size: contain;
@@ -168,7 +150,7 @@ ul {
 
 @media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 2dppx), screen and (max-width: 767px) and (min-resolution: 192dpi) {
   .product-prod {
-    background-image: url(../images/how-its-made/milk_backg320@2.png);
+    background-image: url(../images/howmade/milk-backg320@2.png);
   }
 }
 
@@ -182,7 +164,7 @@ ul {
 
 @media screen and (min-width: 1200px) {
   .container-prod {
-    background-image: url(../images/how-its-made/milk_backg1.png);
+    background-image: url(../images/howmade/milk-backg1.png);
     background-position: center 112px;
     background-repeat: no-repeat;
     background-size: contain;
@@ -191,7 +173,7 @@ ul {
 
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 2dppx), screen and (min-width: 1200px) and (min-resolution: 192dpi) {
   .container-prod {
-    background-image: url(../images/how-its-made/milk_backg2.png);
+    background-image: url(../images/howmade/milk-backg2.png);
   }
 }
 
@@ -329,10 +311,10 @@ ul {
 .btn-text::after {
   content: ' ';
   position: absolute;
-  left: 120px;
-  top: 15px;
+  left: 122px;
+  top: 18px;
   display: block;
-  background-image: url("../images/how-its-made/icon-sign.svg");
+  background-image: url("../images/howmade/icon-sign.svg");
   width: 8px;
   height: 10px;
 }
@@ -423,6 +405,12 @@ ul {
 @media screen and (min-width: 768px) {
   .indent:last-child {
     margin-right: 0px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .picture-icon {
+    margin-top: 20px;
   }
 }
 /*# sourceMappingURL=main.css.map */

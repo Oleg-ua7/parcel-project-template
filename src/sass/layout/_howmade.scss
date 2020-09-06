@@ -71,7 +71,7 @@ ul {
 @media screen and (max-width: 767px) {
   .container-prod {
     // display: flex;
-    background-image: url(../images/how-its-made/milk-backg320@1.png);
+    background-image: url(../images/howmade/milk-backg320@1.png);
     background-repeat: no-repeat;
     background-position: center 482px;
     background-size: contain;
@@ -81,7 +81,7 @@ ul {
   screen and (max-width: 767px) and (min-resolution: 2dppx),
   screen and (max-width: 767px) and (min-resolution: 192dpi) {
   .product-prod {
-    background-image: url(../images/how-its-made/milk-backg320@2.png);
+    background-image: url(../images/howmade/milk-backg320@2.png);
   }
 }
 @media screen and (min-width: 768px) {
@@ -91,7 +91,7 @@ ul {
 }
 @media screen and (min-width: 1200px) {
   .container-prod {
-    background-image: url(../images/how-its-made/milk-backg1.png);
+    background-image: url(../images/howmade/milk-backg1.png);
     background-position: center 112px;
     background-repeat: no-repeat;
     background-size: contain;
@@ -101,7 +101,7 @@ ul {
   screen and (min-width: 1200px) and (min-resolution: 2dppx),
   screen and (min-width: 1200px) and (min-resolution: 192dpi) {
   .container-prod {
-    background-image: url(../images/how-its-made/milk-backg2.png);
+    background-image: url(../images/howmade/milk-backg2.png);
   }
 }
 
@@ -207,11 +207,11 @@ ul {
   &::after {
     content: ' ';
     position: absolute;
-    left: 120px;
-    top: 15px;
+    left: 122px;
+    top: 18px;
 
     display: block;
-    background-image: url('../images/how-its-made/icon-sign.svg');
+    background-image: url('../images/howmade/icon-sign.svg');
     width: 8px;
     height: 10px;
   }
@@ -281,5 +281,10 @@ ul {
 @media screen and (min-width: 768px) {
   .indent:last-child {
     margin-right: 0px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .picture-icon {
+    margin-top: 20px;
   }
 }

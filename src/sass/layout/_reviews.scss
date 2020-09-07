@@ -26,14 +26,15 @@ to {
   left: 50%;
   transform: translateX(-50%);
   max-width: 100%;
-  @media screen and(max-width:767px) {
-    top: -48px;
+  @media screen and(max-width: 767px) {
+    top: -18px;
+    width: 280px;
   }
   @media screen and (min-width: 768px) {
-    top: -106px;
+    top: 106px;
   }
-  @media screen and(min-width:1200px) {
-    top: -162px;
+  @media screen and(min-width: 1200px) {
+    top: 0px;
   }
 }
 .visualhidden {
@@ -65,7 +66,7 @@ to {
 .reviews-slider-description {
   position: relative;
   z-index: 1;
-  padding-top: 47px;
+  padding-top: 100px;
   background-color: #FAFAFA;
   background-position-x: center;
   background-repeat: no-repeat;

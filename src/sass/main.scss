@@ -1,16 +1,19 @@
 /*
  * Главный файл стилей.
- * Все паршалы подключаются сюда.
  */
-
-// Стили для файла с примером HTML-фрагмента
 @import './utils/base';
 @import './utils/variables';
+@import './utils/container';
+@import './utils/container';
+@import './utils/button';
+@import './utils/title-subtitle';
 @import './layout/header';
 @import './layout/hero';
-@import './layout/our-pr-sec-2-0';
+@import './layout/_our-pr-sec-2-0';
 @import './layout/howmade';
 @import './layout/reviews';
-@import './layout/cafe';
+@import './layout/cafe-locations';
 @import './layout/footer';
 
+// Стили для файла с примером HTML-фрагмента
+// @import './example';

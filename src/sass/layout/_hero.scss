@@ -1,298 +1,303 @@
-.hero {
+/* настройка секции герой*/
+.section-hero {
   position: relative;
-  background-color: $bacground-d-pink;
-
+  background-color: #ffb8ca;
   z-index: 0;
-  height: 502px;
-  @media screen and (min-width: 768px) {
-    height: 399px;
-  }
-  @media screen and (min-width: 1280px) {
-    background-color: $bacground-d-pink;
-
-    height: 665px;
-  }
-}
-.logo-company {
-  z-index: 1;
+  overflow: hidden;
 }
 
-.title-hero {
-  display: block;
-  width: 218px;
-  color: $bacground-light;
-  margin-top: 0;
-  margin-bottom: 25px;
-  margin-left: 20px;
+/* переопределение контейнера */
+.hero-content {
   padding-top: 193px;
-  font-family: $secondary-font;
-  font-weight: 400;
+  padding-bottom: 160px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media screen and (min-width: 480px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  position: relative;
+
+  //на планшент
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding-top: 102px;
+    padding-bottom: 173px;
+    background-image: url('../images/hero/tablet/girl-ice.png'),
+      url('../images/hero/tablet/milk.png');
+
+    background-size: 168px 133px, 124px 126px;
+    background-repeat: no-repeat;
+    background-position: bottom 0px right 20px, bottom 27px left 34px;
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+      .box {
+        background-image: url('../images/hero/tablet/girl-ice@2x.png'),
+          url('../images/hero/tablet/milk@2x.png');
+      }
+    }
+
+    @media screen and (min-device-pixel-ratio: 3),
+    screen and (min-resolution: 288dpi),
+    screen and (min-resolution: 3dppx) {
+      .box {
+        background-image: url('../images/hero/tablet/girl-ice@3x.png'),
+          url('../images/hero/tablet/milk@3x.png');
+      }
+    }
+  }
+
+  //на пк
+  @media screen and (min-width: 1200px) {
+    padding-top: 171px;
+    padding-bottom: 214px;
+    padding-left: 74px;
+    padding-right: 58px;
+
+    background-image: url('../images/hero/pc/girl-ice.png'),
+      url('../images/hero/pc/milk.png');
+
+    background-size: 293px 232px, 188px 191px;
+    background-repeat: no-repeat;
+    background-position: bottom 0px right 70px, bottom 45px left 36px;
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+      .box {
+        background-image: url('../images/hero/pc/girl-ice@2x.png'),
+          url('../images/hero/pc/milk@2x.png');
+      }
+    }
+  }
+}
+
+/* заголовок h1 */
+.hero-heading {
+  font-family: Titan One;
+  font-style: normal;
+  font-weight: normal;
   font-size: 26px;
-  line-height: 1.154;
+  line-height: 1.15;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  z-index: 3;
-  @media screen and (min-width: 768px) {
-    width: 162px;
+  color: #ffffff;
+  margin-bottom: 19px;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     font-size: 22px;
-    line-height: 1.136;
-    margin-left: 34px;
-    padding-top: 102px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    width: 277px;
-    font-size: 38px;
-    line-height: 1.158;
-    margin-left: 115px;
-    padding-top: 171px;
-  }
-}
-
-.title-color {
-  color: $accent-color;
-  letter-spacing: 0.04em;
-  @media screen and (min-width: 1280px) {
-    font-size: 58px;
-    // line-height: 1.158;
-  }
-  @media screen and (max-width: 1279px) {
-    font-size: 34px;
-    // line-height: 1.136;
-  }
-  @media screen and (max-width: 767px) {
-    font-size: 48px;
-    // line-height: 1.154;
-  }
-}
-
-.hero-button {
-  margin-left: 20px;
-  z-index: 5;
-  @media screen and (min-width: 768px) {
-    margin-left: 34px;
-  }
-  @media screen and (min-width: 1280px) {
-    margin-left: 115px;
-  }
-}
-
-.button-first,
-.button-second {
-  display: inline-block;
-  border-radius: 20px;
-  border: none;
-  padding: 7px 14px;
-  font-weight: 400;
-  font-size: 8px;
-  line-height: 1.25;
-  align-items: center;
-  cursor: pointer;
-  @media screen and (min-width: 1280px) {
-    font-size: 14px;
-    line-height: 1.28;
-    padding: 11px 23px;
-  }
-}
-
-.button-first {
-  color: $bacground-light;
-  background-color: $accent-color;
-}
-
-.button-second {
-  color: $accent-color;
-  background-color: $bacground-light;
-  margin-left: 8px;
-  &:hover {
-    background-color: $accent-color-second;
-  }
-  @media screen and (min-width: 1280px) {
-    margin-left: 15px;
-  }
-}
-
-.paragraph {
-  display: flex;
-  align-items: center;
-  margin-top: 20px;
-  margin-left: 34px;
-  @media screen and (max-width: 767px) {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-  }
-  @media screen and (min-width: 1280px) {
-    margin-top: 56px;
-    margin-left: 72px;
-  }
-}
-
-.text-paragraph {
-  width: 114px;
-  color: $bacground-light;
-  margin-top: 0;
-  margin-bottom: 7px;
-  font-size: 8px;
-  line-height: 1.5;
-  @media screen and (min-width: 1280px) {
-    width: 200px;
-    font-size: 14px;
-    line-height: 1.42;
+    line-height: 1.13;
     margin-bottom: 20px;
   }
-}
 
-.position {
-  display: block;
-
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1200px) {
+    font-size: 38px;
+    line-height: 1.15;
+    margin-bottom: 25px;
   }
 }
 
-.ellipse-img {
+/* продолжение заголовка h1, другой текст*/
+.hero-heading-passion {
+  font-size: 48px;
+  line-height: 96.5%;
+  color: #d41443;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    font-size: 34px;
+    line-height: 90.5%;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 58px;
+    line-height: 90.5%;
+  }
+}
+
+/* круг в герое*/
+.hero-circle {
+  width: 346px;
+  height: 344px;
+  background-color: #ffa5ba;
+  border-radius: 50%;
   position: absolute;
-  top: 40px;
-  right: 0;
+  left: 9.5%;
+  bottom: 75px;
   z-index: -1;
-  @media screen and (min-width: 768px) {
+
+  //планшет
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 324px;
+    height: 322px;
     bottom: 46px;
     left: 42%;
-    z-index: -1;
   }
-  @media screen and (min-width: 1280px) {
+
+  //монитор
+  @media screen and (min-width: 1200px) {
+    width: 538px;
+    height: 538px;
     bottom: 75px;
-    left: 40%;
-    z-index: 1;
+    left: 434px;
   }
 }
 
-.ice-cream-img {
-  position: absolute;
-  bottom: 0;
-  right: 6%;
-  z-index: -1;
-  @media screen and (min-width: 768px) {
-    bottom: 0;
-    left: 53%;
-    z-index: -1;
-  }
-  @media screen and (min-width: 1280px) {
-    bottom: 0;
-    left: 48%;
-    z-index: 2;
-  }
-}
-
-.girl-img {
-  position: absolute;
-  bottom: 0;
-  left: 71%;
-  z-index: 3;
-  @media screen and (max-width: 767px) {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-  }
-  @media screen and (min-width: 768px) {
-    bottom: 0;
-    left: 76%;
-  }
-  @media screen and (min-width: 1280px) {
-    bottom: 0;
-    left: 71%;
-  }
-}
-
-.progression {
-  position: absolute;
-  top: 94px;
-  right: 34px;
-  z-index: 4;
-  @media screen and (max-width: 767px) {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-  }
-  @media screen and (min-width: 1280px) {
-    right: 97px;
-    top: 156px;
-  }
-}
-
-.progression-num {
+/* настройка мороженого */
+.hero-ice-cream {
   position: relative;
-  color: $accent-color;
-  font-family: $secondary-font;
-  margin-top: 0;
-  margin-bottom: 0px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 28px;
-  line-height: 1.14;
-  letter-spacing: 0.04em;
-  text-align: right;
-  @media screen and (min-width: 1280px) {
-    margin-bottom: 2px;
-    font-size: 46px;
-    line-height: 1.15;
+  top: 9px;
+  left: 81px;
+  width: 171px;
+  height: 410px;
+  z-index: 0;
+
+  //планшет
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 146px;
+    height: 336px;
+    top: 32px;
+    left: 71px;
+  }
+
+  //монитор
+  @media screen and (min-width: 1200px) {
+    width: 236px;
+    height: 537px;
+    left: 119px;
+    top: 56px;
   }
 }
 
-.progression-text {
-  color: $bacground-light;
-  margin-bottom: 0;
-  margin-top: 0;
-  padding-bottom: 15px;
-  font-family: $main-font;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 8px;
-  line-height: 1.25;
-  text-align: right;
-  @media screen and (min-width: 1280px) {
+/* оформление кнопог в герое*/
+.hero-button-group {
+  display: flex;
+
+  .hero-button {
+    width: fit-content;
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 8px;
+    line-height: 1.25;
+    border-radius: 20px;
+    padding: 8px 13px;
+
+    //монитор
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+      line-height: 1.28;
+      padding: 10px 20px;
+    }
+  }
+
+  //растояние между кнопками
+  .hero-button:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+
+/*********Список**********/
+.hero-list-of-number {
+  display: none;
+  margin-left: auto;
+  position: relative;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.hero-list-number {
+  display: flex;
+  flex-direction: column;
+
+  &:not(:last-child) {
+    margin-bottom: 13px;
+
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &::after {
+    content: ' ';
+    width: 16px;
+    height: 16px;
+    background-color: #ffffff;
+    z-index: -1;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    transform: translateX(50%);
+
+    @media screen and (min-width: 1200px) {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .hero-list-number-first {
+    font-family: Titan One;
+    font-size: 28px;
+    line-height: 1.14;
+    text-align: right;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #d41443;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 46px;
+      line-height: 1.15;
+    }
+  }
+
+  .hero-list-number-description {
+    font-family: DM Sans;
+    font-size: 8px;
+    line-height: 1.25;
+    color: #ffffff;
+    text-align: right;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+      line-height: 1.28;
+    }
+  }
+}
+
+/* объединение в один див h1 и список числ*/
+.hero-info-block {
+  display: flex;
+}
+
+.hero-gallery-info {
+  display: none;
+
+  &::after {
+    content: ' ';
+    width: 26px;
+    height: 26px;
+    background-image: url('../images/hero/arrow.png');
+    position: absolute;
+    bottom: -42px;
+    left: 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    width: 200px;
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: normal;
     font-size: 14px;
-    line-height: 1.28;
+    line-height: 140%;
+    color: #ffffff;
+    position: relative;
+    top: 112px;
+    left: 180px;
   }
-}
-
-.ellipse-up {
-  position: absolute;
-  top: 0px;
-  left: 34px;
-  z-index: -1;
-  @media screen and (min-width: 1280px) {
-    top: -3px;
-    left: 55px;
-    z-index: -1;
-  }
-}
-.ellipse-down {
-  position: absolute;
-  top: 56px;
-  left: 33px;
-  z-index: -1;
-  @media screen and (min-width: 1280px) {
-    top: 85px;
-    left: 55px;
-    z-index: -1;
-  }
-}
-.arrow-right {
-  border-radius: 50%;
 }
